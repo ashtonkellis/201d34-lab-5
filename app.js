@@ -8,11 +8,11 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-// function sum(a, b) { //eslint-disable-line
-//   var sumNumeric = a + b;
-//   var sumString = 'The sum of ' + a + ' and ' + b + ' is ' + sumNumeric + '.';
-//   return [sumNumeric, sumString];
-// }
+function sum(a, b) { //eslint-disable-line
+  var sumNumeric = a + b;
+  var sumString = 'The sum of ' + a + ' and ' + b + ' is ' + sumNumeric + '.';
+  return [sumNumeric, sumString];
+}
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -52,8 +52,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var sumNumeric = a + b + c;
-  var productNumeric = a * b * c;
+  var sumNumeric = sum(sum(a,b)[0],c)[0];
+  var productNumeric = multiply(multiply(a,b)[0],c)[0];
   var sumString = a +' and '+ b + ' and ' + c + ' sum to ' + sumNumeric + '.';
   var productString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productNumeric + '.';
   return [sumNumeric, productNumeric, sumString, productString];
